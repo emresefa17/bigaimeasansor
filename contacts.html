@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Biga İmae Asansör</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BİGA İMAE<span> ASANSÖR</span></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="about.html" class="nav-link">Kurumsal</a></li>
+            <li><a href="products.html" class="nav-link">Ürünler</a></li>
+            <li><a href="projects.html" class="nav-link">Projeler</a></li>
+            <li><a href="contacts.html" class="nav-link active">İletişim</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f14d7045c573?q=80&w=2070&auto=format&fit=crop');">
+        <div class="header-content">
+            <h1>Bize Ulaşın</h1>
+            <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / İletişim</div>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h3 style="margin-bottom: 30px; color: white;">İletişim Bilgileri</h3>
+            <p style="margin-bottom: 20px;">7/24 Teknik destek ve satış için bize ulaşabilirsiniz.</p>
+            
+            <div class="info-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>Merkez Ofis</strong><br>
+                    İstiklal Mahallesi Kurtuluş Caddesi No.46 Kat.1<br>Biga / Çanakkale
+                </div>
+            </div>
+            <div class="info-row">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <strong>Telefon</strong><br>
+                    0286 316 21 17<br>0538 516 21 17
+                </div>
+            </div>
+            <div class="info-row">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong>E-posta</strong><br>
+                    bigaimaeasansor@gmail.com
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3 style="margin-bottom: 20px;">Mesaj Gönderin</h3>
+            <form>
+                <div class="input-group">
+                    <label>Adınız Soyadınız</label>
+                    <input type="text" placeholder="Ad Soyad" required>
+                </div>
+                <div class="input-group">
+                    <label>E-posta veya Telefon</label>
+                    <input type="text" placeholder="İletişim bilgisi" required>
+                </div>
+                <div class="input-group">
+                    <label>Mesajınız</label>
+                    <textarea rows="5" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
+                </div>
+                <button type="submit" class="btn-quote" style="border:none; cursor: pointer; width: 100%;">GÖNDER</button>
+            </form>
+        </div>
+    </section>
+
+    <div style="width: 100%; height: 400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3062.0155686949984!2d27.239753676001584!3d40.227962471470555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDEzJzQwLjciTiAyN8KwMTQnMzIuNCJF!5e1!3m2!1str!2str!4v1768142246037!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | Biga İmae Asansör</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BİGA İMAE<span> ASANSÖR</span></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="about.html" class="nav-link active">Kurumsal</a></li>
+            <li><a href="products.html" class="nav-link">Ürünler</a></li>
+            <li><a href="projects.html" class="nav-link">Projeler</a></li>
+            <li><a href="contacts.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');">
+        <div class="header-content">
+            <h1>Hakkımızda</h1>
+            <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Kurumsal</div>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-header">
+            <span class="section-subtitle">BİZ KİMİZ?</span>
+            <h2 class="section-title">20 Yıllık Güven ve Tecrübe</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop" style="border-radius: 8px; box-shadow: var(--shadow);">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <p style="margin-bottom: 20px;">Biga İmae Asansör, 2004 yılından bu yana dikey ulaşım teknolojileri alanında faaliyet gösteren, mühendislik tabanlı bir teknoloji şirketidir. "Önce Güvenlik" ilkesiyle çıktığımız bu yolda, bugün Avrupa, Orta Doğu ve Türkiye genelinde yüzlerce projeye imza atmanın gururunu yaşıyoruz.</p>
+                
+                <h3 style="color: var(--primary); margin-bottom: 10px;">Vizyonumuz</h3>
+                <p style="margin-bottom: 20px;">Global asansör pazarında, yerli mühendislik gücüyle geliştirilen akıllı asansör sistemlerinin öncüsü olmak.</p>
+                
+                <h3 style="color: var(--primary); margin-bottom: 10px;">Misyonumuz</h3>
+                <p>Estetik, konforlu ve enerji verimliliği yüksek taşıma sistemleri ile modern şehirlerin dikey mimarisine değer katmak.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-light);">
+        <div class="section-header">
+            <h2 class="section-title">Kalite Belgelerimiz</h2>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; text-align: center;">
+            <div class="service-card" style="width: 200px;">
+                <i class="fas fa-award" style="font-size: 3rem; color: var(--secondary);"></i>
+                <h4 style="margin-top: 15px;">ISO 9001:2015</h4>
+            </div>
+            <div class="service-card" style="width: 200px;">
+                <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--secondary);"></i>
+                <h4 style="margin-top: 15px;">CE Sertifikası</h4>
+            </div>
+            <div class="service-card" style="width: 200px;">
+                <i class="fas fa-file-contract" style="font-size: 3rem; color: var(--secondary);"></i>
+                <h4 style="margin-top: 15px;">TSE HYB</h4>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerimiz | Biga İmae Asansör</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BİGA İMAE<span> ASANSÖR</span></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="about.html" class="nav-link">Kurumsal</a></li>
+            <li><a href="products.html" class="nav-link active">Ürünler</a></li>
+            <li><a href="projects.html" class="nav-link">Projeler</a></li>
+            <li><a href="contacts.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('images/asansör1.jpg');">
+        <div class="header-content">
+            <h1>Ürünlerimiz & Çözümler</h1>
+            <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Ürünler</div>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">Yolcu Asansörleri</h2>
+            <p>Konut ve ofisler için makine daireli (MR) ve makine dairesiz (MRL) çözümler.</p>
+        </div>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+            <div style="flex: 1;">
+                <img src="images/elevator.webp" style="width:100%; border-radius: 8px;" alt="Yolcu Asansörü">
+            </div>
+            <div style="flex: 2;">
+                <h3>Teknik Özellikler</h3>
+                <table class="tech-table">
+                    <tr>
+                        <th>Özellik</th>
+                        <th>Makine Dairesiz (MRL)</th>
+                        <th>Makine Daireli (MR)</th>
+                    </tr>
+                    <tr>
+                        <td>Kapasite</td>
+                        <td>320 Kg - 2500 Kg</td>
+                        <td>320 Kg - 5000 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Hız</td>
+                        <td>1.0 m/sn - 2.5 m/sn</td>
+                        <td>1.0 m/sn - 4.0 m/sn</td>
+                    </tr>
+                    <tr>
+                        <td>Seyir Mesafesi</td>
+                        <td>Maks 80m</td>
+                        <td>Maks 150m</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Tipi</td>
+                        <td>Dişlisiz (Gearless)</td>
+                        <td>Dişlili / Dişlisiz</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-light);">
+        <div class="section-header">
+            <h2 class="section-title">Yük ve Araç Asansörleri</h2>
+            <p>Ağır sanayi koşullarına dayanıklı hidrolik ve elektrikli sistemler.</p>
+        </div>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+            <!-- Hidrolik Yük Asansörü Kartı -->
+            <div class="product-card">
+                <img src="images/asansör.jfif" alt="Hidrolik Yük Asansörü">
+                <div class="product-card-body">
+                    <h3 style="margin-top: 0;">Hidrolik Yük Asansörü</h3>
+                    <p>Fabrikalar, depolar ve ağır yük taşımacılığı gerektiren endüstriyel tesisler için ideal çözümler sunar.</p>
+                    <table class="tech-table">
+                        <tr>
+                            <th>Kapasite</th>
+                            <td>500 Kg - 10.000 Kg</td>
+                        </tr>
+                        <tr>
+                            <th>Kullanım Alanı</th>
+                            <td>Fabrikalar, Depolar</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Araç Asansörü Kartı -->
+            <div class="product-card">
+                <img src="images/elevator.webp" alt="Araç Asansörü">
+                <div class="product-card-body">
+                    <h3 style="margin-top: 0;">Araç Asansörü</h3>
+                    <p>Otoparklar, otomobil galerileri ve binalarda katlar arası araç transferi için güvenli ve verimli sistemler.</p>
+                    <table class="tech-table">
+                        <tr>
+                            <th>Kapasite</th>
+                            <td>3.000 Kg - 6.000 Kg</td>
+                        </tr>
+                        <tr>
+                            <th>Kullanım Alanı</th>
+                            <td>Otoparklar, Showroomlar</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
+</body>
+</html>

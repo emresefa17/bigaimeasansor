@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz | Biga İmae Asansör</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BİGA İMAE<span> ASANSÖR</span></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="about.html" class="nav-link">Kurumsal</a></li>
+            <li><a href="products.html" class="nav-link">Ürünler</a></li>
+            <li><a href="projects.html" class="nav-link active">Projeler</a></li>
+            <li><a href="contacts.html" class="nav-link">İletişim</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1581553655113-644782012d96?q=80&w=2070&auto=format&fit=crop');">
+        <div class="header-content">
+            <h1>Referans Projeler</h1>
+            <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Projeler</div>
+        </div>
+    </header>
+
+    <section>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="konut">Konut</button>
+            <button class="filter-btn" data-filter="avm">AVM & Otel</button>
+            <button class="filter-btn" data-filter="kamu">Kamu</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="konut">
+                <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1974&auto=format&fit=crop">
+                <div class="portfolio-overlay">
+                    <span class="project-cat">KONUT</span>
+                    <h3 class="project-title">Vadi İstanbul Blokları</h3>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="avm">
+                <img src="https://images.unsplash.com/photo-1519567752329-3711d1b490d1?q=80&w=1974&auto=format&fit=crop">
+                <div class="portfolio-overlay">
+                    <span class="project-cat">AVM</span>
+                    <h3 class="project-title">Metropol AVM</h3>
+                </div>
+            </div>
+             <div class="portfolio-item" data-category="kamu">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop">
+                <div class="portfolio-overlay">
+                    <span class="project-cat">KAMU</span>
+                    <h3 class="project-title">Şehir Hastanesi</h3>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+
+        // Filtreleme Scripti
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if(category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
